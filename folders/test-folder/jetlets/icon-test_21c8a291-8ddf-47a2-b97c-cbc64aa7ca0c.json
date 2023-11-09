@@ -1,0 +1,91 @@
+{
+  "group" : "Jetic Platform",
+  "icon" : "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPg0KICAgIDx0aXRsZT5pY29uL3JvY2tldDwvdGl0bGU+DQogICAgPGcgaWQ9IlN5bWJvbHMiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPg0KICAgICAgICA8ZyBpZD0icm9ja2V0LTItZmlsbCI+DQogICAgICAgICAgICA8cG9seWdvbiBpZD0iUGF0aCIgcG9pbnRzPSIwIDAgMjQgMCAyNCAyNCAwIDI0Ij48L3BvbHlnb24+DQogICAgICAgICAgICA8cGF0aCBkPSJNOC40OTgsMjAgTDE1LjUwMiwyMCBDMTQuODQwNDM4MSwyMS41ODIzMjEyIDEzLjU4MjMyMTIsMjIuODQwNDM4MSAxMiwyMy41MDIgQzEwLjQxNzY3ODgsMjIuODQwNDM4MSA5LjE1OTU2MTg2LDIxLjU4MjMyMTIgOC40OTgsMjAgWiBNMTgsMTQuODA1IEwyMCwxNy4wNzMgTDIwLDE5IEw0LDE5IEw0LDE3LjA3MyBMNiwxNC44MDUgTDYsOSBDNiw1LjUxNyA4LjUwNCwyLjU1MyAxMiwxLjQ1NSBDMTUuNDk2LDIuNTUzIDE4LDUuNTE3IDE4LDkgTDE4LDE0LjgwNSBaIE0xMiwxMSBDMTMuMTA0NTY5NSwxMSAxNCwxMC4xMDQ1Njk1IDE0LDkgQzE0LDcuODk1NDMwNSAxMy4xMDQ1Njk1LDcgMTIsNyBDMTAuODk1NDMwNSw3IDEwLDcuODk1NDMwNSAxMCw5IEMxMCwxMC4xMDQ1Njk1IDEwLjg5NTQzMDUsMTEgMTIsMTEgWiIgaWQ9IlNoYXBlIiBmaWxsPSIjMDAwMDAwIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4NCiAgICAgICAgPC9nPg0KICAgIDwvZz4NCjwvc3ZnPg==",
+  "type" : "SOURCE",
+  "properties" : [ ],
+  "routeDefinitions" : [ {
+    "id" : 1,
+    "camelRouteId" : "route-1",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "timer",
+      "nodeId" : "0d53a3b5-6454-4cad-9bca-0b3f62522b47",
+      "description" : "",
+      "properties" : {
+        "_type" : "timer",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "1000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "isNotActive" : false,
+      "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
+    }, {
+      "name" : "setBody",
+      "nodeId" : "b83a2f98-cafd-48e8-976b-63ea37a58744",
+      "description" : "",
+      "properties" : {
+        "_type" : "setBody",
+        "active" : true,
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "expression" : "",
+        "language" : "Simple",
+        "name" : "setBody",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setBody",
+      "isNotActive" : false,
+      "kameletPropertiesUrl" : "?language=Simple&addNamespaces=false&suppressExceptions=false"
+    }, {
+      "name" : "log",
+      "nodeId" : "9d564bf9-c0ab-4874-9f5a-621a173b939b",
+      "description" : "",
+      "properties" : {
+        "_type" : "log",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers: ${headers}; body: ${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "isNotActive" : false,
+      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=headers: ${headers}; body: ${body}"
+    } ]
+  } ],
+  "id" : "21c8a291-8ddf-47a2-b97c-cbc64aa7ca0c",
+  "name" : "icon-test",
+  "description" : " test 234",
+  "createdAt" : "2023-11-08T01:47:52.674180527",
+  "updatedAt" : "2023-11-09T03:11:07.730321808",
+  "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
+  "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
+}

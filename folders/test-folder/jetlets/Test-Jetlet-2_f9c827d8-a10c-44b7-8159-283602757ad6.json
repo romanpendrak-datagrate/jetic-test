@@ -1,0 +1,132 @@
+{
+  "group" : "Jetic Platform",
+  "icon" : "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+aWNvbi9yb2NrZXQ8L3RpdGxlPgogICAgPGcgaWQ9IlN5bWJvbHMiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJyb2NrZXQtMi1maWxsIj4KICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgiIHBvaW50cz0iMCAwIDI0IDAgMjQgMjQgMCAyNCI+PC9wb2x5Z29uPgogICAgICAgICAgICA8cGF0aCBkPSJNOC40OTgsMjAgTDE1LjUwMiwyMCBDMTQuODQwNDM4MSwyMS41ODIzMjEyIDEzLjU4MjMyMTIsMjIuODQwNDM4MSAxMiwyMy41MDIgQzEwLjQxNzY3ODgsMjIuODQwNDM4MSA5LjE1OTU2MTg2LDIxLjU4MjMyMTIgOC40OTgsMjAgWiBNMTgsMTQuODA1IEwyMCwxNy4wNzMgTDIwLDE5IEw0LDE5IEw0LDE3LjA3MyBMNiwxNC44MDUgTDYsOSBDNiw1LjUxNyA4LjUwNCwyLjU1MyAxMiwxLjQ1NSBDMTUuNDk2LDIuNTUzIDE4LDUuNTE3IDE4LDkgTDE4LDE0LjgwNSBaIE0xMiwxMSBDMTMuMTA0NTY5NSwxMSAxNCwxMC4xMDQ1Njk1IDE0LDkgQzE0LDcuODk1NDMwNSAxMy4xMDQ1Njk1LDcgMTIsNyBDMTAuODk1NDMwNSw3IDEwLDcuODk1NDMwNSAxMCw5IEMxMCwxMC4xMDQ1Njk1IDEwLjg5NTQzMDUsMTEgMTIsMTEgWiIgaWQ9IlNoYXBlIiBmaWxsPSIjMDAwMDAwIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==",
+  "type" : "SOURCE",
+  "properties" : [ {
+    "name" : "body",
+    "default" : "exchangeId: ${exchangeId}",
+    "description" : "The body to log",
+    "title" : "My Custom Kamelet2 Sink",
+    "type" : "string",
+    "required" : true
+  }, {
+    "name" : "period",
+    "default" : "2000",
+    "description" : "The interval (msec) to wait before logging the body",
+    "title" : "Period",
+    "type" : "integer",
+    "required" : false
+  } ],
+  "routeDefinitions" : [ {
+    "id" : 1,
+    "camelRouteId" : "simple-integration",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "timer",
+      "nodeId" : "1283fd1f-fc33-4c13-b005-7b4326cfd311",
+      "description" : "once per second",
+      "properties" : {
+        "_type" : "timer",
+        "active" : true,
+        "advancedParameters" : [ {
+          "name" : "",
+          "uuid" : "1c7a4e4d-a855-4a9d-8267-be000d48e98c",
+          "value" : ""
+        } ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "60000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "isNotActive" : false,
+      "kameletPropertiesUrl" : "?timerName=timer&period=60000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
+    }, {
+      "name" : "setBody",
+      "nodeId" : "2d3eebc1-4a5e-4645-b4f1-f849493c179d",
+      "description" : "add exchangeId to body",
+      "properties" : {
+        "_type" : "setBody",
+        "active" : true,
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "expression" : "test body from simple: ${exchangeId}",
+        "language" : "Simple",
+        "name" : "setBody",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setBody",
+      "isNotActive" : false,
+      "kameletPropertiesUrl" : "?language=Simple&expression=test body from simple: ${exchangeId}&addNamespaces=false&suppressExceptions=false"
+    }, {
+      "name" : "log",
+      "nodeId" : "47b35a14-bd90-4991-84a3-ec0a388273fd",
+      "description" : "EIP log",
+      "properties" : {
+        "_type" : "log",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers3: ${headers}; body1: ${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "isNotActive" : false,
+      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=headers3: ${headers}; body1: ${body}"
+    }, {
+      "name" : "setHeaders",
+      "nodeId" : "239a55e1-9897-428b-a85e-55c78d837c74",
+      "description" : "",
+      "properties" : {
+        "_type" : "setHeaders",
+        "active" : true,
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "headerList" : [ {
+          "headerName" : "test",
+          "headerValue" : "test",
+          "language" : "Constant",
+          "uuid" : "97d10e37-da27-47f8-8c9c-6036db1af50a"
+        } ],
+        "name" : "setHeaders",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setHeaders",
+      "isNotActive" : false,
+      "kameletPropertiesUrl" : "?addNamespaces=false&suppressExceptions=false"
+    } ]
+  } ],
+  "id" : "f9c827d8-a10c-44b7-8159-283602757ad6",
+  "name" : "Test-Jetlet-2",
+  "description" : "jetlet with properties",
+  "createdAt" : "2023-11-08T18:55:08.532064611",
+  "updatedAt" : "2023-11-08T21:59:14.854251936",
+  "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
+  "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
+}

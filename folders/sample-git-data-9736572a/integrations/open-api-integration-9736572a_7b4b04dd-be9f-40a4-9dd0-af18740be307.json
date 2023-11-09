@@ -1,0 +1,66 @@
+{
+  "revision" : 1,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : "997dec0a-9295-434d-b853-29346ffbc2d9",
+  "currentProfileUuid" : null,
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ ],
+  "routeDefinitions" : [ {
+    "id" : null,
+    "camelRouteId" : "open-api-integration",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "getRequest",
+      "nodeId" : "GET request-id",
+      "description" : "GET request",
+      "properties" : {
+        "consumes" : "application/json",
+        "endpoint" : "/api/v1/test",
+        "operationName" : "default",
+        "produces" : "application/json",
+        "requestmethod" : "GET"
+      },
+      "_type" : "restApi",
+      "kameletPropertiesUrl" : "?consumes=application/json&endpoint=/api/v1/test&operationName=default&produces=application/json&requestmethod=GET"
+    }, {
+      "name" : "setBody",
+      "nodeId" : "add hello json to body-id",
+      "description" : "add hello json to body",
+      "properties" : {
+        "expression" : "{\"message\": \"hello from open-api-9736572a\", \"exchangeId\": \"${exchangeId}\"}",
+        "language" : "Simple"
+      },
+      "_type" : "setBody",
+      "kameletPropertiesUrl" : "?language=Simple&expression={\"message\": \"hello from open-api-9736572a\", \"exchangeId\": \"${exchangeId}\"}"
+    }, {
+      "name" : "log",
+      "nodeId" : "EIP log-id",
+      "description" : "EIP log",
+      "properties" : {
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers: ${headers}; body: ${body}"
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&message=headers: ${headers}; body: ${body}"
+    } ]
+  } ],
+  "traits" : [ {
+    "name" : "ingress",
+    "configuration" : {
+      "enabled" : true,
+      "host" : "9736572a.dev.datagrate.co"
+    }
+  } ],
+  "id" : "7b4b04dd-be9f-40a4-9dd0-af18740be307",
+  "name" : "open-api-integration-9736572a",
+  "description" : "Simple integration with an open-api example",
+  "createdAt" : "2023-11-03T19:25:28.453353671",
+  "updatedAt" : "2023-11-03T19:25:28.453354195",
+  "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
+  "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
+}

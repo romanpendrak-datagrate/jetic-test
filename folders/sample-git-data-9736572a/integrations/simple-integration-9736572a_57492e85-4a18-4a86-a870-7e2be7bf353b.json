@@ -1,0 +1,199 @@
+{
+  "revision" : 5,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : null,
+  "currentProfileUuid" : "c4917d48-1ab7-4f9d-8023-61f7dc2333ea",
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ ],
+  "routeDefinitions" : [ {
+    "id" : 1,
+    "camelRouteId" : "simple-integration",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "timer",
+      "nodeId" : "once per second-id",
+      "description" : "once per second",
+      "properties" : {
+        "_type" : "timer",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "1000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
+    }, {
+      "name" : "setBody",
+      "nodeId" : "add exchangeId to body-id",
+      "description" : "add exchangeId to body",
+      "properties" : {
+        "_type" : "setBody",
+        "active" : true,
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "expression" : "test body from simple: ${exchangeId}",
+        "language" : "Simple",
+        "name" : "setBody",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setBody",
+      "kameletPropertiesUrl" : "?language=Simple&expression=test body from simple: ${exchangeId}&addNamespaces=false&suppressExceptions=false"
+    }, {
+      "name" : "messagingEndpoint",
+      "nodeId" : "to route-2-id",
+      "description" : "to route-2",
+      "properties" : {
+        "_type" : "messagingEndpoint",
+        "active" : true,
+        "camelGroup" : "core",
+        "name" : "messagingEndpoint",
+        "toDynamicEndpoint" : false,
+        "uri" : "direct://route-2",
+        "url" : ""
+      },
+      "_type" : "messagingEndpoint",
+      "kameletPropertiesUrl" : "?uri=direct://route-2"
+    } ]
+  }, {
+    "id" : 2,
+    "camelRouteId" : "route-2",
+    "enabled" : true,
+    "routeId" : 2,
+    "route" : [ {
+      "name" : "direct",
+      "nodeId" : "from route-2-id",
+      "description" : "from route-2",
+      "properties" : {
+        "_type" : "direct",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "core",
+        "endpointName" : "route-2",
+        "name" : "direct",
+        "url" : ""
+      },
+      "_type" : "direct",
+      "kameletPropertiesUrl" : "?endpointName=route-2"
+    }, {
+      "name" : "setHeaders",
+      "nodeId" : "set id=${camelId}-id",
+      "description" : "set id=${camelId}",
+      "properties" : {
+        "_type" : "setHeaders",
+        "active" : true,
+        "addNamespaces" : false,
+        "camelGroup" : "core",
+        "headerList" : [ {
+          "headerName" : "id",
+          "headerValue" : "${camelId}",
+          "language" : "Simple"
+        } ],
+        "name" : "setHeaders",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
+      },
+      "_type" : "setHeaders",
+      "kameletPropertiesUrl" : "?addNamespaces=false&suppressExceptions=false"
+    }, {
+      "name" : "dslProcessor",
+      "nodeId" : "to route-3-id",
+      "description" : "to route-3",
+      "properties" : {
+        "_type" : "dslProcessor",
+        "active" : true,
+        "camelGroup" : "core",
+        "dsl" : ".to('direct://route-3')",
+        "name" : "dslProcessor",
+        "url" : ""
+      },
+      "_type" : "dslProcessor",
+      "kameletPropertiesUrl" : "?dsl=.to('direct://route-3')"
+    } ]
+  }, {
+    "id" : 3,
+    "camelRouteId" : "route-3",
+    "enabled" : true,
+    "routeId" : 3,
+    "route" : [ {
+      "name" : "dslProcessor",
+      "nodeId" : "from route-3-id",
+      "description" : "from route-3",
+      "properties" : {
+        "_type" : "dslProcessor",
+        "active" : true,
+        "camelGroup" : "core",
+        "dsl" : "from('direct://route-3')",
+        "name" : "dslProcessor",
+        "url" : ""
+      },
+      "_type" : "dslProcessor",
+      "kameletPropertiesUrl" : "?dsl=from('direct://route-3')"
+    }, {
+      "name" : "process",
+      "nodeId" : "add date to headers-id",
+      "description" : "add date to headers",
+      "properties" : {
+        "_type" : "process",
+        "active" : true,
+        "camelGroup" : "transform",
+        "code" : "exchange.getIn().setHeader(\"date\", new Date())",
+        "import" : "",
+        "name" : "process",
+        "url" : ""
+      },
+      "_type" : "process",
+      "kameletPropertiesUrl" : "?code=exchange.getIn().setHeader(\"date\", new Date())"
+    }, {
+      "name" : "log",
+      "nodeId" : "EIP log-id",
+      "description" : "EIP log",
+      "properties" : {
+        "_type" : "log",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers: ${headers}; body: ${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=headers: ${headers}; body: ${body}"
+    } ]
+  } ],
+  "traits" : [ ],
+  "id" : "57492e85-4a18-4a86-a870-7e2be7bf353b",
+  "name" : "simple-integration-9736572a",
+  "description" : "Simple integration with the timer-body-log example",
+  "createdAt" : "2023-11-03T19:25:28.018443565",
+  "updatedAt" : "2023-11-08T14:54:26.690465406",
+  "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
+  "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
+}

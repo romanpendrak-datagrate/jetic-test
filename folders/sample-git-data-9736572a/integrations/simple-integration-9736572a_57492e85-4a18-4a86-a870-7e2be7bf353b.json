@@ -1,5 +1,5 @@
 {
-  "revision" : 15,
+  "revision" : 17,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
@@ -129,6 +129,21 @@
       "_type" : "dslProcessor",
       "kameletPropertiesUrl" : "?dsl=.to('direct://route-3')",
       "isNotActive" : false
+    }, {
+      "name" : "logger2-source-jetlet",
+      "nodeId" : "kamelet-00-id",
+      "description" : "",
+      "properties" : {
+        "_type" : "kamelet",
+        "active" : true,
+        "camelGroup" : "jetic platform",
+        "name" : "logger2-source-jetlet",
+        "prop1" : "test",
+        "url" : ""
+      },
+      "_type" : "kamelet",
+      "kameletPropertiesUrl" : "?prop1=test",
+      "isNotActive" : false
     } ]
   }, {
     "id" : 3,
@@ -207,7 +222,7 @@
   "name" : "simple-integration-9736572a",
   "description" : "Simple integration with the timer-body-log example",
   "createdAt" : "2023-11-03T19:25:28.018443565",
-  "updatedAt" : "2023-11-12T05:42:34.181436334",
+  "updatedAt" : "2023-11-12T05:45:40.584135364",
   "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
   "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
 }

@@ -1,5 +1,5 @@
 {
-  "revision" : 4,
+  "revision" : 6,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
@@ -37,8 +37,8 @@
         "url" : ""
       },
       "_type" : "timer",
-      "isNotActive" : false,
-      "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00"
+      "kameletPropertiesUrl" : "?timerName=timer&period=1000&repeatCount=0&delay=1000&fixedRate=false&daemon=true&setScheduleTime=false&time=2021-12-31 00:00:00",
+      "isNotActive" : false
     }, {
       "name" : "setProperties",
       "nodeId" : "set 2 input json bodies-id",
@@ -63,8 +63,8 @@
         "url" : ""
       },
       "_type" : "setProperties",
-      "isNotActive" : false,
-      "kameletPropertiesUrl" : "?in-157a8c87-6002-48a7-a20d-de95588e2bd9={\"apiVersion\":\"camel.apache.org/v1\",\"kind\":\"Integration\"}&test-315aac82-fc63-441f-94e7-ae674d4fb382={\"test\":\"was successfully mapped!\"}&addNamespaces=false&suppressExceptions=false"
+      "kameletPropertiesUrl" : "?in-157a8c87-6002-48a7-a20d-de95588e2bd9={\"apiVersion\":\"camel.apache.org/v1\",\"kind\":\"Integration\"}&test-315aac82-fc63-441f-94e7-ae674d4fb382={\"test\":\"was successfully mapped!\"}&addNamespaces=false&suppressExceptions=false",
+      "isNotActive" : false
     }, {
       "name" : "log",
       "nodeId" : "log input jsons-id",
@@ -92,8 +92,8 @@
         "url" : ""
       },
       "_type" : "log",
-      "isNotActive" : false,
-      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=input json 1: ${exchangeProperty.in-157a8c87-6002-48a7-a20d-de95588e2bd9}; input json 2: ${exchangeProperty.test-315aac82-fc63-441f-94e7-ae674d4fb382}"
+      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=input json 1: ${exchangeProperty.in-157a8c87-6002-48a7-a20d-de95588e2bd9}; input json 2: ${exchangeProperty.test-315aac82-fc63-441f-94e7-ae674d4fb382}",
+      "isNotActive" : false
     }, {
       "name" : "atlasmap",
       "nodeId" : "map jsons to xml-id",
@@ -115,8 +115,8 @@
         "url" : ""
       },
       "_type" : "atlasmap",
-      "isNotActive" : false,
-      "kameletPropertiesUrl" : "?resourceUri=atlasmap-mapping.adm&allowContextMapAll=false&contentCache=false&lazyStartProducer=false&targetMapMode=MAP"
+      "kameletPropertiesUrl" : "?resourceUri=atlasmap-mapping.adm&allowContextMapAll=false&contentCache=false&lazyStartProducer=false&targetMapMode=MAP",
+      "isNotActive" : false
     }, {
       "name" : "log",
       "nodeId" : "log output xml-id",
@@ -144,8 +144,8 @@
         "url" : ""
       },
       "_type" : "log",
-      "isNotActive" : false,
-      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=output xml: ${body}"
+      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=output xml: ${body}",
+      "isNotActive" : false
     } ]
   } ],
   "traits" : [ ],
@@ -153,7 +153,7 @@
   "name" : "mapping-integration-9736572a",
   "description" : "Mapping integration from json to xml",
   "createdAt" : "2023-11-03T19:25:28.523850849",
-  "updatedAt" : "2023-11-08T21:54:44.447386259",
+  "updatedAt" : "2023-11-12T05:48:56.896014939",
   "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
   "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
 }

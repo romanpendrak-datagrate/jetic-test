@@ -1,5 +1,5 @@
 {
-  "revision" : 19,
+  "revision" : 20,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
@@ -99,6 +99,21 @@
       "_type" : "log",
       "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=headers: ${headers}; body1: ${body}",
       "isNotActive" : false
+    }, {
+      "name" : "logger-source-jetlet",
+      "nodeId" : "kamelet-00-id",
+      "description" : "",
+      "properties" : {
+        "" : "",
+        "_type" : "kamelet",
+        "active" : true,
+        "camelGroup" : "jetic platform",
+        "name" : "logger-source-jetlet",
+        "url" : ""
+      },
+      "_type" : "kamelet",
+      "kameletPropertiesUrl" : "",
+      "isNotActive" : false
     } ]
   } ],
   "traits" : [ ],
@@ -106,7 +121,7 @@
   "name" : "simple-integration-9736572a",
   "description" : "Simple integration with the timer-body-log example",
   "createdAt" : "2023-11-03T19:25:28.018443565",
-  "updatedAt" : "2023-11-13T04:40:18.215072806",
+  "updatedAt" : "2023-11-13T04:40:43.765349295",
   "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
   "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
 }

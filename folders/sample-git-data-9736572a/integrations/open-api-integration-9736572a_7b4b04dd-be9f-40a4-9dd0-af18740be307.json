@@ -1,14 +1,14 @@
 {
-  "revision" : 1,
+  "revision" : 2,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
   "openApiUuid" : "997dec0a-9295-434d-b853-29346ffbc2d9",
-  "currentProfileUuid" : null,
+  "currentProfileUuid" : "c4917d48-1ab7-4f9d-8023-61f7dc2333ea",
   "parameterGroupUuids" : [ ],
   "repoResourceUuids" : [ ],
   "routeDefinitions" : [ {
-    "id" : null,
+    "id" : 1,
     "camelRouteId" : "open-api-integration",
     "enabled" : true,
     "routeId" : 1,
@@ -17,36 +17,78 @@
       "nodeId" : "GET request-id",
       "description" : "GET request",
       "properties" : {
+        "_type" : "restApi",
+        "active" : true,
+        "camelGroup" : "rest",
         "consumes" : "application/json",
         "endpoint" : "/api/v1/test",
+        "name" : "getRequest",
         "operationName" : "default",
         "produces" : "application/json",
-        "requestmethod" : "GET"
+        "requestmethod" : "GET",
+        "url" : ""
       },
       "_type" : "restApi",
-      "kameletPropertiesUrl" : "?consumes=application/json&endpoint=/api/v1/test&operationName=default&produces=application/json&requestmethod=GET"
+      "isNotActive" : false
     }, {
       "name" : "setBody",
       "nodeId" : "add hello json to body-id",
       "description" : "add hello json to body",
       "properties" : {
+        "_type" : "setBody",
+        "active" : true,
+        "addNamespaces" : false,
+        "camelGroup" : "core",
         "expression" : "{\"message\": \"hello from open-api-9736572a\", \"exchangeId\": \"${exchangeId}\"}",
-        "language" : "Simple"
+        "language" : "Simple",
+        "name" : "setBody",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "url" : ""
       },
       "_type" : "setBody",
-      "kameletPropertiesUrl" : "?language=Simple&expression={\"message\": \"hello from open-api-9736572a\", \"exchangeId\": \"${exchangeId}\"}"
+      "isNotActive" : false
     }, {
       "name" : "log",
       "nodeId" : "EIP log-id",
       "description" : "EIP log",
       "properties" : {
+        "_type" : "log",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
         "level" : "INFO",
         "logType" : "EIP",
         "loggerName" : "log",
-        "message" : "headers: ${headers}; body: ${body}"
+        "message" : "headers: ${headers}; body: ${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
       },
       "_type" : "log",
-      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&message=headers: ${headers}; body: ${body}"
+      "isNotActive" : false
+    }, {
+      "name" : "test123456-source-jetlet",
+      "nodeId" : "kamelet-00-id",
+      "description" : "",
+      "properties" : {
+        "_type" : "kamelet",
+        "active" : true,
+        "camelGroup" : "testing",
+        "name" : "test123456-source-jetlet",
+        "url" : ""
+      },
+      "_type" : "kamelet",
+      "isNotActive" : false
     } ]
   } ],
   "traits" : [ {
@@ -60,7 +102,7 @@
   "name" : "open-api-integration-9736572a",
   "description" : "Simple integration with an open-api example",
   "createdAt" : "2023-11-03T19:25:28.453353671",
-  "updatedAt" : "2023-11-03T19:25:28.453354195",
+  "updatedAt" : "2023-11-15T15:05:52.784692203",
   "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
   "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
 }

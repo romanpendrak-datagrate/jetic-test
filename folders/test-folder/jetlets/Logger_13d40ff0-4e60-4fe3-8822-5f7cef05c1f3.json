@@ -9,6 +9,13 @@
     "title" : "Property 1",
     "type" : "String",
     "required" : true
+  }, {
+    "name" : "test2",
+    "default" : "22",
+    "description" : "2",
+    "title" : "2",
+    "type" : "Boolean",
+    "required" : true
   } ],
   "routeDefinitions" : [ {
     "id" : 1,
@@ -17,8 +24,8 @@
     "routeId" : 1,
     "route" : [ {
       "name" : "log",
-      "nodeId" : "9d58e098-27da-49c8-a479-7f7f1cf0660e",
-      "description" : "",
+      "nodeId" : "log-00-id",
+      "description" : "log-00-id",
       "properties" : {
         "_type" : "log",
         "active" : true,
@@ -41,12 +48,11 @@
         "url" : ""
       },
       "_type" : "log",
-      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=headers: ${headers}; body: ${body}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false",
       "isNotActive" : false
     }, {
       "name" : "log",
-      "nodeId" : "07f4e8d5-a125-4f6a-9814-b7c182428402",
-      "description" : "",
+      "nodeId" : "log-01-id",
+      "description" : "log-01-id",
       "properties" : {
         "_type" : "log",
         "active" : true,
@@ -70,7 +76,6 @@
         "url" : ""
       },
       "_type" : "log",
-      "kameletPropertiesUrl" : "?level=INFO&logType=EIP&loggerName=log&message=headers: ${headers}; body: ${body}&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false",
       "isNotActive" : false
     } ]
   } ],
@@ -78,7 +83,7 @@
   "name" : "Logger",
   "description" : "Logging jetlet - testing",
   "createdAt" : "2023-11-03T20:03:15.240462973",
-  "updatedAt" : "2023-11-12T05:47:07.798772528",
+  "updatedAt" : "2023-11-15T17:56:52.726101136",
   "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
   "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
 }

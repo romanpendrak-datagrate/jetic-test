@@ -1,0 +1,64 @@
+{
+  "revision" : 9,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : null,
+  "currentProfileUuid" : "c4917d48-1ab7-4f9d-8023-61f7dc2333ea",
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ ],
+  "routeDefinitions" : [ {
+    "id" : 1,
+    "camelRouteId" : "route-1",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "timer",
+      "nodeId" : "timer-00-id",
+      "description" : "timer-00-id",
+      "properties" : {
+        "_type" : "timer",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "1000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "isNotActive" : false
+    }, {
+      "name" : "rollback",
+      "nodeId" : "rollback-00-id",
+      "description" : "rollback-00-id",
+      "properties" : {
+        "_type" : "rollback",
+        "active" : true,
+        "camelGroup" : "routing",
+        "description" : "",
+        "markRollbackOnly" : true,
+        "markRollbackOnlyLast" : true,
+        "message" : "test",
+        "name" : "rollback",
+        "url" : ""
+      },
+      "_type" : "rollback",
+      "isNotActive" : false
+    } ]
+  } ],
+  "traits" : [ ],
+  "id" : "ff197bd7-38b4-4040-ade7-57d7a3620afd",
+  "name" : "rollback-example",
+  "description" : "rollback example",
+  "createdAt" : "2023-12-08T15:20:28.4628191",
+  "updatedAt" : "2023-12-08T15:47:53.3250122",
+  "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
+  "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
+}

@@ -1,0 +1,308 @@
+{
+  "revision" : 63,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : null,
+  "currentProfileUuid" : "c4917d48-1ab7-4f9d-8023-61f7dc2333ea",
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ ],
+  "routeDefinitions" : [ {
+    "id" : 1,
+    "camelRouteId" : "route-3",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "direct",
+      "nodeId" : "direct-00-id",
+      "description" : "direct-00-id",
+      "properties" : {
+        "_type" : "direct",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "core",
+        "endpointName" : "route-3",
+        "name" : "direct",
+        "url" : ""
+      },
+      "_type" : "direct",
+      "isNotActive" : false
+    }, {
+      "name" : "delay",
+      "nodeId" : "delay-00-id",
+      "description" : "delay-00-id",
+      "properties" : {
+        "_type" : "delay",
+        "active" : true,
+        "addNamespaces" : false,
+        "asyncDelayed" : false,
+        "camelGroup" : "misc",
+        "expression" : "${body}",
+        "language" : "Simple",
+        "name" : "delay",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "timeToWait" : "Value",
+        "url" : "",
+        "value" : "5000"
+      },
+      "_type" : "delay",
+      "isNotActive" : false
+    }, {
+      "name" : "log",
+      "nodeId" : "log-00-id",
+      "description" : "log-00-id",
+      "properties" : {
+        "_type" : "log",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "2",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "isNotActive" : false
+    } ]
+  }, {
+    "id" : 2,
+    "camelRouteId" : "route-4",
+    "enabled" : true,
+    "routeId" : 2,
+    "route" : [ {
+      "name" : "direct",
+      "nodeId" : "direct-01-id",
+      "description" : "direct-01-id",
+      "properties" : {
+        "_type" : "direct",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "core",
+        "endpointName" : "route-4",
+        "name" : "direct",
+        "url" : ""
+      },
+      "_type" : "direct",
+      "isNotActive" : false
+    }, {
+      "name" : "delay",
+      "nodeId" : "delay-01-id",
+      "description" : "delay-01-id",
+      "properties" : {
+        "_type" : "delay",
+        "active" : true,
+        "addNamespaces" : false,
+        "asyncDelayed" : false,
+        "camelGroup" : "misc",
+        "expression" : "${body}",
+        "language" : "Simple",
+        "name" : "delay",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "timeToWait" : "Value",
+        "url" : "",
+        "value" : "5000"
+      },
+      "_type" : "delay",
+      "isNotActive" : false
+    }, {
+      "name" : "log",
+      "nodeId" : "log-01-id",
+      "description" : "log-01-id",
+      "properties" : {
+        "_type" : "log",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "3",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "isNotActive" : false
+    } ]
+  }, {
+    "id" : 3,
+    "camelRouteId" : "route-2",
+    "enabled" : true,
+    "routeId" : 3,
+    "route" : [ {
+      "name" : "direct",
+      "nodeId" : "direct-02-id",
+      "description" : "direct-02-id",
+      "properties" : {
+        "_type" : "direct",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "core",
+        "endpointName" : "route-2",
+        "name" : "direct",
+        "url" : ""
+      },
+      "_type" : "direct",
+      "isNotActive" : false
+    }, {
+      "name" : "delay",
+      "nodeId" : "delay-02-id",
+      "description" : "delay-02-id",
+      "properties" : {
+        "_type" : "delay",
+        "active" : true,
+        "addNamespaces" : false,
+        "asyncDelayed" : false,
+        "camelGroup" : "misc",
+        "expression" : "${body}",
+        "language" : "Simple",
+        "name" : "delay",
+        "namespaces" : [ ],
+        "suppressExceptions" : false,
+        "timeToWait" : "Value",
+        "url" : "",
+        "value" : "5000"
+      },
+      "_type" : "delay",
+      "isNotActive" : false
+    }, {
+      "name" : "log",
+      "nodeId" : "log-02-id",
+      "description" : "log-02-id",
+      "properties" : {
+        "_type" : "log",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "1",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "isNotActive" : false
+    } ]
+  }, {
+    "id" : 4,
+    "camelRouteId" : "route-1",
+    "enabled" : true,
+    "routeId" : 4,
+    "route" : [ {
+      "name" : "timer",
+      "nodeId" : "timer-00-id",
+      "description" : "timer-00-id",
+      "properties" : {
+        "_type" : "timer",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "name" : "timer",
+        "period" : "60000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer",
+        "url" : ""
+      },
+      "_type" : "timer",
+      "isNotActive" : false
+    }, {
+      "name" : "threads",
+      "nodeId" : "threads-00-id",
+      "description" : "threads-00-id",
+      "properties" : {
+        "_type" : "threads",
+        "active" : true,
+        "addNamespaces" : false,
+        "camelGroup" : "routing",
+        "keepAliveTime" : "60",
+        "maxPoolSize" : "20",
+        "maxQueueSize" : "1000",
+        "name" : "threads",
+        "namespaces" : [ ],
+        "poolSize" : "3",
+        "suppressExceptions" : false,
+        "timeUnit" : "SECONDS",
+        "url" : ""
+      },
+      "_type" : "threads",
+      "isNotActive" : false
+    }, {
+      "name" : "multicast",
+      "nodeId" : "multicast-00-id",
+      "description" : "multicast-00-id",
+      "properties" : {
+        "_type" : "multicast",
+        "active" : true,
+        "aggregationStrategy" : "new org.apache.camel.processor.aggregate.UseLatestAggregationStrategy()",
+        "camelGroup" : "routing",
+        "name" : "multicast",
+        "parallelProcessing" : true,
+        "stopOnAggregateException" : false,
+        "stopOnException" : false,
+        "timeout" : "0",
+        "uris" : [ {
+          "uri" : "direct:route-2",
+          "uuid" : "f4e2c894-1bf1-48b5-9e20-f845c4583c6d"
+        }, {
+          "uri" : "direct:route-3",
+          "uuid" : "45fa6f4b-2280-4b7d-9fe9-569cdd93d8df"
+        }, {
+          "uri" : "direct:route-4",
+          "uuid" : "12aa364b-39b6-414e-b1e7-1bcdd5c14f3b"
+        } ],
+        "url" : "",
+        "useAggregationStrategy" : false
+      },
+      "_type" : "multicast",
+      "branches" : [ ],
+      "isNotActive" : false
+    } ]
+  } ],
+  "traits" : [ ],
+  "id" : "ecf6d670-b50c-4567-bf93-999c549e3094",
+  "name" : "threads-example",
+  "description" : "threads example",
+  "createdAt" : "2023-12-07T21:11:02.367796994",
+  "updatedAt" : "2023-12-07T23:47:51.7409633",
+  "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
+  "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
+}

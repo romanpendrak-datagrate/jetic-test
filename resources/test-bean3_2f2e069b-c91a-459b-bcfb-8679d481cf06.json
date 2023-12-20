@@ -1,0 +1,17 @@
+{
+  "type" : "BEANS",
+  "properties" : {
+    "codeGroovy" : "beans {\n    myString = 'Hello World!'\n\n    myProcessor = processor { \n        it.in.body = 'Hello from Groovy'\n    }\n\n    myPredicate = predicate {\n        it.in.body != null\n    }\n}",
+    "codeJava" : "@BindToRegistry\npublic String myString() {\n    return \"Hello World\";\n}\n\n@BindToRegistry\npublic Processor myProcessor() {\n    return e -> e.getMessage().setBody(\"Hello from Java\");\n}",
+    "importsGroovy" : null,
+    "importsJava" : "import org.apache.camel.BindToRegistry;\nimport org.apache.camel.Processor;",
+    "type" : "Java"
+  },
+  "id" : "2f2e069b-c91a-459b-bcfb-8679d481cf06",
+  "name" : "test-bean3",
+  "description" : "",
+  "createdAt" : "2023-12-20T04:39:47.295414494",
+  "updatedAt" : "2023-12-20T04:39:53.73772922",
+  "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
+  "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
+}

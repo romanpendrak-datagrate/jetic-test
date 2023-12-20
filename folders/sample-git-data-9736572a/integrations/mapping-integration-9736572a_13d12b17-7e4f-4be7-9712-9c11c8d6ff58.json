@@ -1,12 +1,12 @@
 {
-  "revision" : 7,
+  "revision" : 12,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
   "openApiUuid" : null,
-  "currentProfileUuid" : "c4917d48-1ab7-4f9d-8023-61f7dc2333ea",
+  "currentProfileUuid" : null,
   "parameterGroupUuids" : [ ],
-  "repoResourceUuids" : [ "824330b7-b090-4d58-8023-1a6c359b4b73" ],
+  "repoResourceUuids" : [ "2f2e069b-c91a-459b-bcfb-8679d481cf06", "824330b7-b090-4d58-8023-1a6c359b4b73", "d9191ece-8d74-47ea-8e13-bb56c8f5075a", "4e8e7170-f868-48bf-864c-bdfdafcd3563" ],
   "routeDefinitions" : [ {
     "id" : 1,
     "camelRouteId" : "mapping-integration",
@@ -123,7 +123,7 @@
   "name" : "mapping-integration-9736572a",
   "description" : "Mapping integration from json to xml",
   "createdAt" : "2023-11-03T19:25:28.523850849",
-  "updatedAt" : "2023-12-05T17:05:02.414191852",
+  "updatedAt" : "2023-12-20T04:49:01.998428372",
   "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
   "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
 }

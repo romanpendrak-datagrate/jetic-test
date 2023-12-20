@@ -1,12 +1,12 @@
 {
-  "revision" : 2,
+  "revision" : 5,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
   "openApiUuid" : "997dec0a-9295-434d-b853-29346ffbc2d9",
   "currentProfileUuid" : "c4917d48-1ab7-4f9d-8023-61f7dc2333ea",
   "parameterGroupUuids" : [ ],
-  "repoResourceUuids" : [ ],
+  "repoResourceUuids" : [ "bccf174e-9eed-4993-97ad-4a52117c0492", "2f2e069b-c91a-459b-bcfb-8679d481cf06", "54d6b604-9110-4144-84f3-c0a36cdc4bd9" ],
   "routeDefinitions" : [ {
     "id" : 1,
     "camelRouteId" : "open-api-integration",
@@ -79,7 +79,7 @@
     }, {
       "name" : "test123456-source-jetlet",
       "nodeId" : "kamelet-00-id",
-      "description" : "",
+      "description" : "kamelet-00-id",
       "properties" : {
         "_type" : "kamelet",
         "active" : true,
@@ -102,7 +102,7 @@
   "name" : "open-api-integration-9736572a",
   "description" : "Simple integration with an open-api example",
   "createdAt" : "2023-11-03T19:25:28.453353671",
-  "updatedAt" : "2023-11-15T15:05:52.784692203",
+  "updatedAt" : "2023-12-20T04:43:10.178952095",
   "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
   "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
 }

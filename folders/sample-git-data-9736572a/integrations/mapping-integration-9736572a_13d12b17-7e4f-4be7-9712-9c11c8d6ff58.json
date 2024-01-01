@@ -1,5 +1,5 @@
 {
-  "revision" : 13,
+  "revision" : 14,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
@@ -66,28 +66,6 @@
       },
       "_type" : "log",
       "isNotActive" : false
-    }, {
-      "name" : "atlasmap",
-      "nodeId" : "map jsons to xml-id",
-      "description" : "map jsons to xml",
-      "properties" : {
-        "_type" : "atlasmap",
-        "active" : true,
-        "advancedParameters" : [ ],
-        "allowContextMapAll" : false,
-        "camelGroup" : "component",
-        "contentCache" : false,
-        "lazyStartProducer" : false,
-        "name" : "atlasmap",
-        "resourceUri" : "atlasmap-mapping.adm",
-        "sourceMapName" : "",
-        "targetMapMode" : "MAP",
-        "targetMapName" : "",
-        "toDynamicEndpoint" : false,
-        "url" : ""
-      },
-      "_type" : "atlasmap",
-      "isNotActive" : false
     } ]
   }, {
     "id" : 2,
@@ -121,6 +99,28 @@
       },
       "_type" : "log",
       "isNotActive" : false
+    }, {
+      "name" : "atlasmap",
+      "nodeId" : "map jsons to xml-id",
+      "description" : "map jsons to xml",
+      "properties" : {
+        "_type" : "atlasmap",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "allowContextMapAll" : false,
+        "camelGroup" : "component",
+        "contentCache" : false,
+        "lazyStartProducer" : false,
+        "name" : "atlasmap",
+        "resourceUri" : "atlasmap-mapping.adm",
+        "sourceMapName" : "",
+        "targetMapMode" : "MAP",
+        "targetMapName" : "",
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "atlasmap",
+      "isNotActive" : false
     } ]
   } ],
   "traits" : [ ],
@@ -128,7 +128,7 @@
   "name" : "mapping-integration-9736572a",
   "description" : "Mapping integration from json to xml",
   "createdAt" : "2023-11-03T19:25:28.523850849",
-  "updatedAt" : "2024-01-01T21:09:09.336256777",
+  "updatedAt" : "2024-01-01T23:11:59.85787051",
   "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
   "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
 }

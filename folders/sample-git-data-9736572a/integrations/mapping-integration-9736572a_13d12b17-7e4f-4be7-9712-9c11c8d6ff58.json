@@ -1,5 +1,5 @@
 {
-  "revision" : 14,
+  "revision" : 15,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
@@ -66,13 +66,7 @@
       },
       "_type" : "log",
       "isNotActive" : false
-    } ]
-  }, {
-    "id" : 2,
-    "camelRouteId" : "route-2",
-    "enabled" : true,
-    "routeId" : 2,
-    "route" : [ {
+    }, {
       "name" : "log",
       "nodeId" : "log output xml-id",
       "description" : "log output xml",
@@ -95,6 +89,7 @@
         "showHeaders" : false,
         "showProperties" : false,
         "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
         "url" : ""
       },
       "_type" : "log",
@@ -128,7 +123,7 @@
   "name" : "mapping-integration-9736572a",
   "description" : "Mapping integration from json to xml",
   "createdAt" : "2023-11-03T19:25:28.523850849",
-  "updatedAt" : "2024-01-01T23:11:59.85787051",
+  "updatedAt" : "2024-01-01T23:12:48.009340393",
   "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
   "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
 }

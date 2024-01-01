@@ -1,10 +1,10 @@
 {
-  "revision" : 12,
+  "revision" : 13,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
   "openApiUuid" : null,
-  "currentProfileUuid" : null,
+  "currentProfileUuid" : "c4917d48-1ab7-4f9d-8023-61f7dc2333ea",
   "parameterGroupUuids" : [ ],
   "repoResourceUuids" : [ "2f2e069b-c91a-459b-bcfb-8679d481cf06", "824330b7-b090-4d58-8023-1a6c359b4b73", "d9191ece-8d74-47ea-8e13-bb56c8f5075a", "4e8e7170-f868-48bf-864c-bdfdafcd3563" ],
   "routeDefinitions" : [ {
@@ -88,7 +88,13 @@
       },
       "_type" : "atlasmap",
       "isNotActive" : false
-    }, {
+    } ]
+  }, {
+    "id" : 2,
+    "camelRouteId" : "route-2",
+    "enabled" : true,
+    "routeId" : 2,
+    "route" : [ {
       "name" : "log",
       "nodeId" : "log output xml-id",
       "description" : "log output xml",
@@ -111,7 +117,6 @@
         "showHeaders" : false,
         "showProperties" : false,
         "showStackTrace" : false,
-        "toDynamicEndpoint" : false,
         "url" : ""
       },
       "_type" : "log",
@@ -123,7 +128,7 @@
   "name" : "mapping-integration-9736572a",
   "description" : "Mapping integration from json to xml",
   "createdAt" : "2023-11-03T19:25:28.523850849",
-  "updatedAt" : "2023-12-20T04:49:01.998428372",
+  "updatedAt" : "2024-01-01T21:09:09.336256777",
   "createdBy" : "832157ef-48f8-44ee-875a-5ed38eda773d",
   "updatedBy" : "832157ef-48f8-44ee-875a-5ed38eda773d"
 }
